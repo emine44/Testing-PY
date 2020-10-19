@@ -5,6 +5,7 @@ from flask_debugtoolbar import DebugToolbarExtension
 import doctest
 import unittest
 
+
 app = Flask(__name__)
 app.secret_key = "SECRETSECRETSECRET"
  
@@ -120,3 +121,20 @@ if __name__ == "__main__":
     app.config['DEBUG_TB_INTERCEPT_REDIRECTS'] = False
     DebugToolbarExtension(app)
     app.run(host="0.0.0.0")
+
+# >>> from party import most_and_least_common_type
+# >>> treats = [
+# ...  {'type': 'dessert'},
+# ...  {'type': 'dessert'},
+# ...  {'type': 'appetizer'},
+# ...  {'type': 'dessert'},
+# ...  {'type': 'appetizer'},
+# ...  {'type': 'drink'},
+# ... ]
+# >>>  most_and_least_common_type(treats)
+
+# >>> treats= [
+# ...  {'type': 'drink'},
+# ... {'type': 'drink'},]
+# >>> most_and_least_common_type(treats)
+# ('drink', 'drink')
